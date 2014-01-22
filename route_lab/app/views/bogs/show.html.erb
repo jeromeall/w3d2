@@ -1,0 +1,20 @@
+
+<div>
+	<label>Name: </label> <%= @bog.name %> <br>
+	<label>Description: </label> <br>
+	<%= @bog.description %>
+
+
+	<form action="/bogs/<%= @bog.id %>/edit" method="get">
+		<%= token_tag form_authenticity_token %>
+		<button>Edit Creature</button>
+	</form>
+
+
+	<form action="/bogs/<%= @bog.id %>" method="post">
+		<input type="hidden" name="_method" value="delete">
+		<%= token_tag form_authenticity_token %>
+		<button>Delete Creature</button>
+	</form>
+
+</div>

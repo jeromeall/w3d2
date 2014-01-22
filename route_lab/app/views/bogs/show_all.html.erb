@@ -1,0 +1,6 @@
+<% @bogs.each do |bog| %>
+	<ul>
+		<a href="/bogs/<%= bog[:id] %>" ><li> Name: <%= bog[:name] %> </li> </a>
+		
+	</ul>
+<%end%>

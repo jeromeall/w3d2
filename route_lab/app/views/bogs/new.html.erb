@@ -1,0 +1,10 @@
+<form action = "/bogs" method="post">
+	<label>Creature Name: </label> <input type="text" name="bog[name]"> <br>
+	<label>Description: </label> <br>
+	<textarea name= "bog[description]"></textarea>
+	
+	<!-- authenticty tag -->
+	<%= token_tag form_authenticity_token %>
+	
+	<button>Submit</button>
+</form>
